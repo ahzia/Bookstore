@@ -1,7 +1,8 @@
 import Book from "./Book";
+import AddBook from "./AddBook";
 const Books = () => {
   return(
-    <Book bookName='' />
+    <AddBook />
   );
 };
 export default Books;

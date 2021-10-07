@@ -11,8 +11,14 @@ import {
 function App() {
   return (
     <Router>
-      <Link to='/'>Books List</Link>
-      <Link to='/categories'>Categories</Link>
+      <ul>
+        <li>
+          <Link to='/'>Books List</Link>
+        </li>
+        <li>
+          <Link to='/categories'>Categories</Link>
+        </li>
+      </ul>
       <Switch>
         <Route path='/categories'>
           <Categories />

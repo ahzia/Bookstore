@@ -25,7 +25,7 @@ to use this repo please follow this steps :
 you need npm to install dependencies and run the project, if you don't already have it go to this link to install it in your machine [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
 
 ### Setup
-- clone the repo : `https://github.com/ahzia/Math-Magicians.git`
+- clone the repo : `https://github.com/ahzia/Bookstore.git`
 - run `npm i`
 
 ### Usage

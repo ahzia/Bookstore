@@ -1,7 +1,5 @@
-import AddBook from "./AddBook";
-const Books = () => {
-  return(
-    <AddBook />
-  );
-};
+import AddBook from './AddBook';
+
+const Books = () =>
+  <AddBook />;
 export default Books;

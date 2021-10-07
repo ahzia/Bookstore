@@ -1,6 +1,6 @@
 /* eslint react/destructuring-assignment: 0 */
 /* eslint react/prop-types: 0 */
-const Book = (props) =>(
+const Book = (props) => (
   <div>
     {props.bookName}
     {props.bookAuthor}

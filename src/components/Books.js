@@ -1,5 +1,4 @@
 import AddBook from './AddBook';
 
-const Books = () =>
-  <AddBook />;
+const Books = () => <AddBook />;
 export default Books;

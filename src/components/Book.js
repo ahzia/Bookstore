@@ -9,10 +9,10 @@ const Book = (props) => {
     const {id} = e.target;
     dispatch(removeBook(id));
   }
-  return(
+  return (
     <div>
-      {props.book.name}
-      {props.book.author}
+      <p>Book title: {props.book.title}</p>
+      <p>Book author: {props.book.author}</p>
       <button id={props.book.id} onClick={removeBookFromStore}>Remove</button>
     </div>
   );

@@ -3,37 +3,26 @@ const REMOVE_BOOK = 'bookStore/books/REMOVE_BOOK';
 const initialState = [];
 
 //Action Creators:
-
 export const addBook = payload => ({
-    type: ADD_BOOK,
-    payload
+  type: ADD_BOOK,
+  payload
 });
 
 export const removeBook = payload => ({
-    type: REMOVE_BOOK,
-    payload
+  type: REMOVE_BOOK,
+  payload
 });
 
 const reducer =  (state = initialState, action) => {
-    switch (action.type) {
-      case ADD_BOOK:
-        return [ ...state, action.payload];
-          /*
-          return a new state object in which the books array will contain a new book object, passed by action.payload.
-          Remember -  you MUSN'T mutate the state. You have to return a new state object - i.e.:
-          return [ ...state, action.payload];
-          */
-      case REMOVE_BOOK:
-        const {id} = action;
-        return state.filter(book => book.id !== id);
-          /*
-          use ES6 filter() method to create a new array, which will not contain the book you want to remove from the store (filter by the id key - i.e.: 
-          return state.filter(book => book.id !== id);
-          */
+  switch (action.type) {
+    case ADD_BOOK:
+      return [ ...state, action.payload];
+    case REMOVE_BOOK:
+      const id = action.payload;
+      return state.filter(book => book.id !== id);
+    default:
+      return state;
+  }
+};
   
-      default:
-          return state;
-      }
-    };
-    
-    export default reducer;
+export default reducer;

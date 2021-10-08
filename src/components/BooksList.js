@@ -1,11 +1,11 @@
 /* eslint react/destructuring-assignment: 0 */
 /* eslint react/prop-types: 0 */
+import { useState, useEffect } from 'react';
 import Book from './Book';
-import { useState,useEffect } from 'react';
 import store from '../redux/configureStore';
 
-const BooksList = (props) => {
-  const [books,setBooks] = useState([]); 
+const BooksList = () => {
+  const [books, setBooks] = useState([]);
 
   useEffect(() => {
     store.subscribe(() => {

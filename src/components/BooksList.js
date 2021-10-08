@@ -1,4 +1,3 @@
-/* eslint react/destructuring-assignment: 0 */
 /* eslint react/prop-types: 0 */
 import { useState, useEffect } from 'react';
 import Book from './Book';
@@ -12,7 +11,6 @@ const BooksList = () => {
       setBooks(store.getState().booksReducer);
     });
   });
-
   return (
     <div>
       {books.map((book) => (

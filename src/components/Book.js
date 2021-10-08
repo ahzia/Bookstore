@@ -12,12 +12,14 @@ const Book = (props) => {
   return (
     <div>
       <p>
-        Book title: { props.book.title }
+        Book title:
+        { props.book.title }
       </p>
       <p>
-        Book author: { props.book.author }
+        Book author:
+        { props.book.author }
       </p>
-      <button id={ props.book.id } type="" onClick={removeBookFromStore}>Remove</button>
+      <button id={props.book.id} type="button" onClick={removeBookFromStore}>Remove</button>
     </div>
   );
 };

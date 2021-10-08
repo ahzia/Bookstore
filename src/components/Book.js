@@ -2,8 +2,8 @@
 /* eslint react/prop-types: 0 */
 const Book = (props) => (
   <div>
-    {props.bookName}
-    {props.bookAuthor}
+    {props.book.name}
+    {props.book.author}
     <button type="submit">Remove</button>
   </div>
 );

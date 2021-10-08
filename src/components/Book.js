@@ -1,11 +1,13 @@
 /* eslint react/destructuring-assignment: 0 */
 /* eslint react/prop-types: 0 */
 import { useDispatch } from 'react-redux';
-import {addBook} from './redux/books/books';
+import {removeBook} from '../redux/books/books';
 
 const Book = (props) => {
+  const dispatch = useDispatch();
   const removeBookFromStore = (e) => {
-    
+    const {id} = e.target;
+    dispatch(removeBook(id));
   }
   return(
     <div>

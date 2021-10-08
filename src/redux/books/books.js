@@ -24,7 +24,7 @@ const reducer =  (state = initialState, action) => {
           return [ ...state, action.payload];
           */
       case REMOVE_BOOK:
-        const {id} = action.payload;
+        const {id} = action;
         return state.filter(book => book.id !== id);
           /*
           use ES6 filter() method to create a new array, which will not contain the book you want to remove from the store (filter by the id key - i.e.: 

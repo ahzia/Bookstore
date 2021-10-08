@@ -7,9 +7,12 @@ import {
 } from 'react-router-dom';
 import Books from './components/Books';
 import Categories from './components/Categories';
+import {Provider} from 'react-redux'
+import store from './redux/configureStore';
 
 function App() {
   return (
+    <Provider store={store}>
     <Router>
       <ul>
         <li>
@@ -28,6 +31,7 @@ function App() {
         </Route>
       </Switch>
     </Router>
+    </Provider>
   );
 }
 

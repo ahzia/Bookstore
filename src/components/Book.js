@@ -1,9 +1,9 @@
-/* eslint react/prop-types: 0 */
 import { useDispatch } from 'react-redux';
 import { removeBook } from '../redux/books/books';
+import PropTypes from 'prop-types';
 
-const Book = (props) => {
-  const {id, title, author} =props.book;
+const Book = ({book}) => {
+  const { id, title, author } = book;
   const dispatch = useDispatch();
   const removeBookFromStore = (e) => {
     const { id } = e.target;
@@ -23,4 +23,8 @@ const Book = (props) => {
     </div>
   );
 };
+
+Book.propTypes = {
+  book: PropTypes.object.isRequired,
+}
 export default Book;

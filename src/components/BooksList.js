@@ -1,4 +1,3 @@
-/* eslint react/prop-types: 0 */
 import { useState, useEffect } from 'react';
 import Book from './Book';
 import store from '../redux/configureStore';

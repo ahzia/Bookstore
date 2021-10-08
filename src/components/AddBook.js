@@ -6,7 +6,13 @@ import { v4 as uuidv4 } from "uuid"
 const AddBook = () => {
   const initialState = {title:'',author:''}
   const [book, setBook] = useState(initialState);
+  const [error,setError] = useState('');
   const dispatch = useDispatch();
+
+  const resetForm = () => {
+    setError('');
+    setBook(initialState);
+  }
 
   const onChange = (e) => {
     const {name, value} = e.target;
@@ -19,13 +25,20 @@ const AddBook = () => {
 
   const submitBookToStore = (e) => {
     e.preventDefault();
-    const newBook = {
-        id: uuidv4(),
-        title:book.title,
-        author:book.author,
+    if(book.title === '') {
+      setError('Title is Required');
+    } else if(book.author === '') {
+      setError('Author is Required');
+    } else {
+      const newBook = {
+          id: uuidv4(),
+          title:book.title,
+          author:book.author,
+      }
+      dispatch(addBook(newBook));
+      resetForm();
     }
-    dispatch(addBook(newBook));
-}
+  }
 
   return (
     <form onSubmit={submitBookToStore}>
@@ -33,6 +46,7 @@ const AddBook = () => {
       <input type='text' value={book.title} name='title' onChange={onChange} />
       Author:
       <input type='text' value={book.author} name='author' onChange={onChange} />
+      <p>{error}</p>
       <button type="submit">Add Book</button>
     </form>
   );

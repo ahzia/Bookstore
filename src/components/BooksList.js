@@ -19,7 +19,7 @@ const BooksList = () => {
   });
 
   return (
-    <div>
+    <div className="booksContainer">
       {books.map((book) => (
         <div key={book.id}>
           <Book book={book} />

@@ -1,26 +1,18 @@
-import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
-import { removeBookFromApi } from '../redux/books/middlewares';
+import './index.scss';
+import Info from './Info';
+import Progress from './Progress';
+import Chapter from './Chapter';
 
 const Book = ({ book }) => {
-  const { id, title, author } = book;
-  const dispatch = useDispatch();
-  const removeBookFromStore = (e) => {
-    const { id } = e.target;
-    dispatch(removeBookFromApi(id));
-  };
   return (
-    <div>
-      <p>
-        Book title:
-        { title }
-      </p>
-      <p>
-        Book author:
-        { author }
-      </p>
-      <button id={id} type="button" onClick={removeBookFromStore}>Remove</button>
+    <div className="bookInfoContainer">
+      <Info book={book} />
+      <Progress />
+      <div className="verticalSeparator"> </div>
+      <Chapter />
     </div>
+
   );
 };
 

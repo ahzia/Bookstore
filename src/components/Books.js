@@ -2,9 +2,10 @@ import AddBook from './AddBook';
 import BooksList from './BooksList';
 
 const Books = () => (
-  <div className = 'app bg-grey'>
-    <AddBook />
+  <div >
     <BooksList />
+    <div className="horizontalSeparator"></div>
+    <AddBook />
   </div>
 );
 export default Books;

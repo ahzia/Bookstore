@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
-import { addBook } from '../redux/books/books';
+import { addBookToApi } from '../redux/books/books';
 
 const AddBook = () => {
   const initialState = { title: '', author: '' };
@@ -35,7 +35,7 @@ const AddBook = () => {
         title: book.title,
         author: book.author,
       };
-      dispatch(addBook(newBook));
+      dispatch(addBookToApi(newBook));
       resetForm();
     }
   };

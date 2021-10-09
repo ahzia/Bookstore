@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
-import { removeBookFromApi } from '../redux/books/books';
+import { removeBookFromApi } from '../redux/books/middlewares';
 
 const Book = ({ book }) => {
   const { id, title, author } = book;

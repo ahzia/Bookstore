@@ -1,46 +1,25 @@
-import {get, add, remove} from '../../API/bookStore';
 const ADD_BOOK = 'bookStore/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookStore/books/REMOVE_BOOK';
 const ADD_LIST_OF_BOOKS_FROM_API = 'bookStore/books/ADD_LIST_OF_BOOKS_FROM_API';
 const initialState = [];
 
 // Action Creators:
-const addBook = (payload) => ({
+export const addBook = (payload) => ({
   type: ADD_BOOK,
   payload,
 });
 
-const removeBook = (payload) => ({
+export const removeBook = (payload) => ({
   type: REMOVE_BOOK,
   payload,
 });
 
-const addListOfBooksFromApi = (payload) => ({
+export const addListOfBooksFromApi = (payload) => ({
     type: ADD_LIST_OF_BOOKS_FROM_API,
     payload,
 });
 
-// redux thunks middlewares for adding/getting/removing books from the API.
-const addBookToApi = (payload) => (dispatch) => {
-  add(payload).then(status => {
-    if(status){
-      dispatch(addBook(payload));
-    }
-  });
-};
-  
-const removeBookFromApi = (payload) => (dispatch) => {
-  remove(payload).then(status => {
-    if(status){
-      dispatch(removeBook(payload));                  
-    }
-  });
-}
-  
-const getListOfBooks = () => (dispatch) => {
-  get()
-    .then((data) => dispatch(addListOfBooksFromApi(data)));
-};
+
 
 const prepareData = (rawData) => {
   const bookList = [];
@@ -76,7 +55,4 @@ const reducer = (state = initialState, action) => {
 
 export {
   reducer as default,
-  addBookToApi,
-  getListOfBooks,
-  removeBookFromApi,
 };

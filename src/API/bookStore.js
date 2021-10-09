@@ -18,7 +18,7 @@ const add = async (book) => {
     title:book.title,
     category:book.author
   };
-
+  let status = false;
   await fetch(endPoint, {
   method: 'POST',
   headers: {
@@ -27,22 +27,23 @@ const add = async (book) => {
   body: JSON.stringify(newBook)
   }).then((response) => {
     if (response.status === 201){
-      return true;
+      status = true;
     }
-    return false;
   });
+  return status;
 };
 
 const remove = async (id) => {
+  let status = false;
   await fetch(`${endPoint}/${id}`, {
     method: 'DELETE',
     body: JSON.stringify({ item_id: id })
   }).then((response) => response.text()).then((data) => {
     if (data === 'The book was deleted successfully!'){
-      return true;
+      status =  true;
     }
-    return false;
   });
+  return status;
 }
 
 export {get, add, remove}

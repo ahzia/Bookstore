@@ -1,22 +1,23 @@
 import { useState, useEffect } from 'react';
-import { useSelector,  useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import Book from './Book';
 import store from '../redux/configureStore';
-import { getListOfBooks } from '../redux/books/books';
+import { getListOfBooks } from '../redux/books/middlewares';
 
 const BooksList = () => {
   const [books, setBooks] = useState([]);
   const dispatch = useDispatch();
+
   useEffect(() => {
-    // fetch data from API
     dispatch(getListOfBooks());
   },[]);
+
   useEffect(() => {
-    // fetch data from API
     store.subscribe(() => {
       setBooks(store.getState().booksReducer);
     });
   });
+
   return (
     <div>
       {books.map((book) => (

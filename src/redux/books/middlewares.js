@@ -14,7 +14,7 @@ const addBookToApi = (payload) => {
 const removeBookFromApi = (payload) => {
   remove(payload).then((status) => {
     if (status) {
-      store.dispatch(removeBook(payload));           
+      store.dispatch(removeBook(payload));
     }
   });
 };

@@ -1,8 +1,8 @@
 import { useDispatch } from 'react-redux';
-import { removeBook } from '../redux/books/books';
 import PropTypes from 'prop-types';
+import { removeBook } from '../redux/books/books';
 
-const Book = ({book}) => {
+const Book = ({ book }) => {
   const { id, title, author } = book;
   const dispatch = useDispatch();
   const removeBookFromStore = (e) => {
@@ -25,6 +25,6 @@ const Book = ({book}) => {
 };
 
 Book.propTypes = {
-  book: PropTypes.object.isRequired,
-}
+  book: PropTypes.objectOf(PropTypes.object()),
+};
 export default Book;

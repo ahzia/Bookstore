@@ -3,10 +3,11 @@ $theme-color : #0290ff;
 $accent-color : #929294;
 
 .navbar {
-  width: 100%;
+  width: 90%;
   display: flex;
   justify-content: space-between;
   background-color: white;
+  margin-left:70px;
 
   .brandLinksContainer {
     display: flex;
@@ -17,7 +18,7 @@ $accent-color : #929294;
       color: $theme-color;
       font-size: 2rem;
       font-weight: bold;
-      font-family: 'MuseoModerno', cursive;
+      font-family: Montserrat;
       margin: 5px 0 5px 40px;
     }
 

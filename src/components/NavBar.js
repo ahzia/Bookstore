@@ -7,9 +7,9 @@ const NavBar = () => (
     <div className={Styles.brandLinksContainer}>
       <h1 className={Styles.brand}>Bookstore CMS</h1>
       <Link to="/" activeClassName={Styles.activeLink} exact>
-        Books List
+        BOOKS
       </Link>
-      <Link to="/categories" activeClassName={Styles.activeLink} exact>Categories</Link>
+      <Link to="/categories" activeClassName={Styles.activeLink} exact>CATEGORIES</Link>
     </div>
     <div className={Styles.user}>
       <FaUserAlt />

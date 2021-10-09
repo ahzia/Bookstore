@@ -25,7 +25,7 @@ $formInputs-margin: 30px;
 .horizontalSeparator {
   display: block;
   background-color: $accent-color;
-  height: 3px;
+  height: 0.5px;
   margin: 0 100px;
   -webkit-border-radius: 25%;
   -moz-border-radius: 25%;
@@ -35,7 +35,7 @@ $formInputs-margin: 30px;
 }
 
 .addBookContainer {
-  margin: 0 100px;
+  margin: 0 110px;
 
   .header {
     font-size: 1.6rem;
@@ -51,7 +51,7 @@ $formInputs-margin: 30px;
       background-color: white;
       border: 1px solid $accent-color;
       color: $dark-grey;
-      width: 300px;
+      width: 80%;
       margin-right: $formInputs-margin;
       height: 2rem;
       -webkit-border-radius: 4px;
@@ -74,7 +74,7 @@ $formInputs-margin: 30px;
 }
 
 .footer {
-  height: 80px;
+  height: 85px;
   text-align: center;
   background-color: white;
 

@@ -14,14 +14,16 @@ function App() {
   return (
     <Provider store={store}>
       <Router>
-        <ul>
-          <li>
-            <Link to="/">Books List</Link>
-          </li>
-          <li>
-            <Link to="/categories">Categories</Link>
-          </li>
-        </ul>
+          <header>
+            <ul>
+              <li>
+                <Link to="/">Books List</Link>
+              </li>
+              <li>
+                <Link to="/categories">Categories</Link>
+              </li>
+            </ul>
+          </header>
         <Switch>
           <Route path="/categories">
             <Categories />

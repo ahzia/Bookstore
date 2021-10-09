@@ -41,14 +41,15 @@ const AddBook = () => {
   };
 
   return (
-    <form onSubmit={submitBookToStore}>
-      Book Name:
-      <input type="text" value={book.title} name="title" onChange={onChange} />
-      Author:
-      <input type="text" value={book.author} name="author" onChange={onChange} />
+    <div className="addBookContainer">
+      <h2 className="header">Add new book </h2>
+      <form onSubmit={submitBookToStore}>
+        <input type="text" className="bookTitle" placeholder="Book Title" value={book.title} name="title" onChange={onChange} />
+        <input type="text" className="bookAuthor" placeholder="Book Author" value={book.author} name="author" onChange={onChange} />
+        <button type="submit" className="submitBtn">Add Book</button>
+      </form>
       <p>{error}</p>
-      <button type="submit">Add Book</button>
-    </form>
+    </div>
   );
 };
 export default AddBook;

@@ -3,8 +3,9 @@ import BooksList from './BooksList';
 
 const Books = () => (
   <div>
-    <AddBook />
     <BooksList />
+    <div className="horizontalSeparator" />
+    <AddBook />
   </div>
 );
 export default Books;

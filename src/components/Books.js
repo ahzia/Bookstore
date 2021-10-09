@@ -4,7 +4,7 @@ import BooksList from './BooksList';
 const Books = () => (
   <div>
     <AddBook />
-    <BooksList books={[]} />
+    <BooksList />
   </div>
 );
 export default Books;

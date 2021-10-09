@@ -1,27 +1,26 @@
-import store from '../configureStore';
 import { get, add, remove } from '../../API/bookStore';
 import { addBook, removeBook, addListOfBooksFromApi } from './books';
 
 // redux thunks middlewares for adding/getting/removing books from the API.
-const addBookToApi = (payload) => {
+const addBookToApi = (payload) => (dispatch) => {
   add(payload).then((status) => {
     if (status) {
-      store.dispatch(addBook(payload));
+      dispatch(addBook(payload));
     }
   });
 };
 
-const removeBookFromApi = (payload) => {
+const removeBookFromApi = (payload) => (dispatch) => {
   remove(payload).then((status) => {
     if (status) {
-      store.dispatch(removeBook(payload));
+      dispatch(removeBook(payload));
     }
   });
 };
 
-const getListOfBooks = () => {
+const getListOfBooks = () => (dispatch) => {
   get()
-    .then((data) => store.dispatch(addListOfBooksFromApi(data)));
+    .then((data) => dispatch(addListOfBooksFromApi(data)));
 };
 
 export {

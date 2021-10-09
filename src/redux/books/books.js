@@ -22,6 +22,7 @@ export const addListOfBooksFromApi = (payload) => ({
 const prepareData = (rawData) => {
   const bookList = [];
   for (const id in rawData) {
+    // eslint-disable-next-line no-restricted-syntax
     if (Object.prototype.hasOwnProperty.call(rawData, id)) {
       const { category, title } = rawData[id][0];
       const author = category;

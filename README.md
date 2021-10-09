@@ -6,7 +6,7 @@
 > See list of Books
 
 ## ScreenShots
-![Coming Soon ...](./screenshot.png)
+![Screenshot of the Project](./screenshot.png)
 
 ## Built with
 
@@ -15,7 +15,7 @@
 
 ## Live Demo
 
-Comming Soon ...
+Deployed to github Pages: [live Link](https://ahzia.github.io/Bookstore)
 
 ## Getting Started
 

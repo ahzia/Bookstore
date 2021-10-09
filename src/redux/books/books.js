@@ -15,11 +15,9 @@ export const removeBook = (payload) => ({
 });
 
 export const addListOfBooksFromApi = (payload) => ({
-    type: ADD_LIST_OF_BOOKS_FROM_API,
-    payload,
+  type: ADD_LIST_OF_BOOKS_FROM_API,
+  payload,
 });
-
-
 
 const prepareData = (rawData) => {
   const bookList = [];
@@ -30,13 +28,13 @@ const prepareData = (rawData) => {
       const book = {
         id,
         title,
-        author
+        author,
       };
       bookList.push(book);
     }
   }
   return bookList;
-}
+};
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {

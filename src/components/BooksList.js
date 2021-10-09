@@ -10,7 +10,7 @@ const BooksList = () => {
 
   useEffect(() => {
     dispatch(getListOfBooks());
-  },[]);
+  }, []);
 
   useEffect(() => {
     store.subscribe(() => {

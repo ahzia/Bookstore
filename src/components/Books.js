@@ -2,9 +2,9 @@ import AddBook from './AddBook';
 import BooksList from './BooksList';
 
 const Books = () => (
-  <div >
+  <div>
     <BooksList />
-    <div className="horizontalSeparator"></div>
+    <div className="horizontalSeparator" />
     <AddBook />
   </div>
 );

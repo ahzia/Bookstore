@@ -6,7 +6,7 @@ import {
 import { Provider } from 'react-redux';
 import Books from './components/Books';
 import Categories from './components/Categories';
-import NavBar from './components/NavBar'
+import NavBar from './components/NavBar';
 import Footer from './components/Footer';
 import store from './redux/configureStore';
 import './app.scss';

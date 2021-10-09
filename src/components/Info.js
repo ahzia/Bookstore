@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { removeBookFromApi } from '../redux/books/middlewares';
 
-const Info = ({book}) => {
+const Info = ({ book }) => {
   const { id, title, author } = book;
   const dispatch = useDispatch();
   const removeBookFromStore = (e) => {

@@ -55,14 +55,6 @@ $formInputs-margin: 30px;
       border-radius: 4px;
     }
 
-    select {
-      width: 150px;
-      margin-right: $formInputs-margin;
-      background-color: white;
-      border: 1px solid $accent-color;
-      border-radius: 4px;
-    }
-
     .submitBtn {
       text-transform: uppercase;
       background-color: $theme-color;
@@ -76,11 +68,6 @@ $formInputs-margin: 30px;
 }
 
 .footer {
-  position: absolute;
-  width: 100%;
-  bottom: 0;
-  left: 0;
-  right: 0;
   height: 80px;
   text-align: center;
   background-color: white;
